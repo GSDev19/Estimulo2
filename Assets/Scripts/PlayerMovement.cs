@@ -13,8 +13,16 @@ public class PlayerMovement : MonoBehaviour
     private float speed = 8f;
     private float jumpingPower = 32f;
 
- public float moveSpeed = 5f;
+     public float moveSpeed = 5f;
     private Vector2 movementInput;
+
+    private bool isPaused = false;
+
+    void Start()
+    {
+        ControladorJuego.Instance.setPlayer(this.gameObject);    
+        ControladorJuego.Instance.setRespawnPosition(transform.position);    
+    }
 
     private void Update()
     {
@@ -43,6 +51,14 @@ public class PlayerMovement : MonoBehaviour
         if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+    }
+
+    public void HandlePause(InputAction.CallbackContext context)
+    {
+        if(context.started)
+        {
+            ControladorJuego.Instance.HandlePause();
         }
     }
 

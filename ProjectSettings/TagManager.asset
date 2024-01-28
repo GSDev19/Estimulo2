@@ -41,6 +41,9 @@ TagManager:
   - name: Fondo
     uniqueID: 445949429
     locked: 0
+  - name: Parallax
+    uniqueID: 3988262239
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
