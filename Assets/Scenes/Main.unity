@@ -9566,7 +9566,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 946a88e793b601d1e9d714e246e965ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 1660130206}
 --- !u!61 &1146811018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13325,7 +13324,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
